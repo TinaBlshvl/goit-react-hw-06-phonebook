@@ -1,15 +1,10 @@
-import css from '../Section/Section.module.css';
 import PropTypes from 'prop-types';
+import css from '../Section/Section.module.css';
 
 export const Section = ({ title }) => {
-  return (
-    <section className={css.container}>
-      <h1 className={css.title}>{title}</h1>
-    </section>
-  );
+  return <h1 className={css.container}>{title}</h1>;
 };
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  // children: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 };
