@@ -6,7 +6,8 @@ import { getContacts, getFilter } from 'reactRedux/sectors';
 
 import { filterContacts } from 'reactRedux/sliceFilter';
 import { deleteContact } from 'reactRedux/sliceContacts';
-export const Contacts = ({ title }) => {
+
+export const Contacts = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
