@@ -1,11 +1,8 @@
-import PropTypes from 'prop-types';
 import css from '../Contacts/Contacts.module.css';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, getFilter } from 'reactRedux/sectors';
-
-import { filterContacts } from 'reactRedux/sliceFilter';
-import { deleteContact } from 'reactRedux/sliceContacts';
+import { deleteContact, filterContacts } from 'reactRedux/sliceContacts';
 
 export const Contacts = () => {
   const contacts = useSelector(getContacts);
@@ -61,8 +58,4 @@ export const Contacts = () => {
       </ul>
     </section>
   );
-};
-
-Contacts.propTypes = {
-  title: PropTypes.string.isRequired,
 };
